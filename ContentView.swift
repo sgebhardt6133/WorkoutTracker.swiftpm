@@ -6,7 +6,6 @@ struct ContentView: View {
     @State var Reps:Int = 0
     var body: some View {
         VStack {
-
             TextField("Enter Workout", text: $workout)
             Button("Monday"){
                 
@@ -32,4 +31,3 @@ struct ContentView: View {
         }
     }
 }
-
