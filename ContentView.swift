@@ -15,7 +15,7 @@ struct ContentView: View {
                 
             }
             Button("Wednesday"){
-                
+                print("text")
             }
             Button("Thursday"){
                 
