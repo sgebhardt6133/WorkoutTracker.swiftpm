@@ -6,6 +6,7 @@ struct ContentView: View {
     @State var Reps:Int = 0
     var body: some View {
         VStack {
+            
             TextField("Enter Workout", text: $workout)
             Button("Monday"){
                 
@@ -14,7 +15,7 @@ struct ContentView: View {
                 
             }
             Button("Wednesday"){
-                
+                print("text")
             }
             Button("Thursday"){
                 
@@ -27,6 +28,21 @@ struct ContentView: View {
             }
             Button("Sunday"){
                 
+            }
+            if #available(iOS 16.0, *) {
+                NavigationStack {
+                    Text("Hello, World!").padding()
+                        .navigationTitle("SwiftUI")
+                        .toolbar {
+                            ToolbarItem(placement: .bottomBar) {
+                                Button("Press Me") {
+                                    print("Pressed")
+                                }
+                            }
+                        }
+                }
+            } else {
+                // Fallback on earlier versions
             }
         }
     }
