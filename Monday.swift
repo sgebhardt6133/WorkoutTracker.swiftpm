@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-struct MyView: View {
-    var body: some View {
-        VStack {
-            
-        }
-    }
+struct MondayView: View {
+    @Binding var Final: Tracker
+    var body: some View {}
 }
-
