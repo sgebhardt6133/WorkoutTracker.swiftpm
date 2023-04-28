@@ -7,7 +7,6 @@
 import SwiftUI
 
 struct Sunday: View {
-    var items: Exercise
     @State var newWorkout: String = ""
     @State var newSets: Int = 0
     @State var newReps: Int = 0
