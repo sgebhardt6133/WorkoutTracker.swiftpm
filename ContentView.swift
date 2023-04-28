@@ -10,23 +10,23 @@ struct ContentView: View {
                 NavigationLink(destination: Monday()) { 
                     Text("Monday")
                 }
-                Button("Tuesday"){
-                    
+                NavigationLink(destination: Tuesday()) {
+                Text("Tuesday")
                 }
-                Button("Wednesday"){
-                    
+                NavigationLink(destination: Wednesday()) {
+                    Text("Wednesday")
                 }
-                Button("Thursday"){
-                    
+                NavigationLink(destination: Thursday()) {
+                    Text("Thursday")
                 }
-                Button("Friday"){
-                    
+                NavigationLink(destination: Friday()) {
+                    Text("Friday")
                 }
-                Button("Saturday"){
-                    
+                NavigationLink(destination: Saturday()) {
+                    Text("Saturday")
                 }
-                Button("Sunday"){
-                    
+                NavigationLink(destination: Sunday()) {
+                    Text("Sunday")
                 }
             }
         }
