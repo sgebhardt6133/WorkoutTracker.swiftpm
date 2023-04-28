@@ -5,9 +5,8 @@ struct ContentView: View {
     @State var Sets:Int = 0
     @State var Reps:Int = 0
     var body: some View {
-        VStack {
-            TextField("Enter Workout", text: $workout)
-            NavigationView{
+        NavigationView{
+            VStack{
                 NavigationLink("Monday"){
                     MondayView(Final: $Final)
                 }
@@ -30,7 +29,8 @@ struct ContentView: View {
                     
                 }
             }
-          
         }
+        .navigationViewStyle(.stack)
+        
     }
 }
