@@ -27,11 +27,35 @@ struct Sunday: View {
                             newSets = 0
                             newReps = 0
                             newWeight = 0
+                items.save()
                         }, label: {
                             Image(systemName: "folder.badge.plus")
                                 .font(.largeTitle)
                                 .foregroundColor(.cyan)
                         })
+            @State var ExerciseArray:[Exercise] = []
+
+                @State var itemsKey: String = "items_key"
+            
+           
+
+//                init() {
+//                    retrieve()
+//                }
+//
+//            func retrieve(){
+//                    guard
+//                        let data = UserDefaults.standard.data(forKey: itemsKey),
+//                        let saveditems = try? JSONDecoder().decode([Exercise].self, from: data)
+//                    else{return}
+//                    self.ExerciseArray = saveditems
+//                }
+//        }
+
+            List(ItemsClass.ExerciseArray, id: \.self){ currentitem in
+                        Sunday(currentitem: currentitem)
+                    }
+            
         }
     }
 }
