@@ -9,8 +9,12 @@ import SwiftUI
 
 struct TitleScreen: View {
     var body: some View {
-        VStack {
-            
+            NavigationView {
+                VStack {
+                    NavigationLink("Go to app") {
+                        
+                    }
+            }
         }
     }
 }
