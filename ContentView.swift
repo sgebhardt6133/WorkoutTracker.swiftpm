@@ -7,8 +7,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack{
-                NavigationLink("Monday"){
-                   
+                NavigationLink(destination: Monday()) { 
+                    Text("Monday")
                 }
                 Button("Tuesday"){
                     
