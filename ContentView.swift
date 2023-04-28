@@ -7,44 +7,30 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TextField("Enter Workout", text: $workout)
-            Button("Monday"){
-                NavigationLink("Monday") {
+            NavigationView{
+                NavigationLink("Monday"){
+                    MondayView(Final: $Final)
+                }
+                Button("Tuesday"){
+                    
+                }
+                Button("Wednesday"){
+                    
+                }
+                Button("Thursday"){
+                    
+                }
+                Button("Friday"){
+                    
+                }
+                Button("Saturday"){
+                    
+                }
+                Button("Sunday"){
                     
                 }
             }
-            Button("Tuesday"){
-                
-            }
-            Button("Wednesday"){
-                
-            }
-            Button("Thursday"){
-                
-            }
-            Button("Friday"){
-                
-            }
-            Button("Saturday"){
-                
-            }
-            Button("Sunday"){
-                
-            }
-            if #available(iOS 16.0, *) {
-                NavigationStack {
-                    Text("Hello, World!").padding()
-                        .navigationTitle("SwiftUI")
-                        .toolbar {
-                            ToolbarItem(placement: .bottomBar) {
-                                Button("Press Me") {
-                                    print("Pressed")
-                                }
-                            }
-                        }
-                }
-            } else {
-                // Fallback on earlier versions
-            }
+          
         }
     }
 }
