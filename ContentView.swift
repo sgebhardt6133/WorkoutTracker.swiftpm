@@ -8,7 +8,7 @@ struct ContentView: View {
         NavigationView{
             VStack{
                 NavigationLink("Monday"){
-                    MondayView(Final: $Final)
+                   
                 }
                 Button("Tuesday"){
                     
@@ -31,6 +31,7 @@ struct ContentView: View {
             }
         }
         .navigationViewStyle(.stack)
+//        .navigationBarBackButtonHidden(true)
         
     }
 }
