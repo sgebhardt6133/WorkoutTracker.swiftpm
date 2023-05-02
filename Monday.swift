@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+struct Monday: View {
+    
+    @State var workoutList:[WorkoutInfo] = []
+    
+    var body: some View {
+        AddWorkoutView(workoutList: $workoutList)
+        
+    }
+}
+
 
 
 
