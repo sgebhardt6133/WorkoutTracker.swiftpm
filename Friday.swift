@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+struct Friday: View {
+    var body: some View {
+        VStack{}
+    }
+}
+
 //struct Friday: View {
 //    @State var newWorkout: String = ""
 //    @State var newSets: Int = 0

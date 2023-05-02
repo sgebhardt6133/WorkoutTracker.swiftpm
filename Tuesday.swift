@@ -6,7 +6,11 @@
 //
 
 import SwiftUI
-
+struct Tuesday: View {
+    var body: some View {
+        VStack{}
+    }
+}
 //struct Tuesday: View {
 //    @State var newWorkout: String = ""
 //    @State var newSets: Int = 0
