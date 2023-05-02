@@ -35,6 +35,9 @@ struct Monday: View {
                         .foregroundColor(.cyan)
                 })
             }
+            
+
+            
         }
     }
     
