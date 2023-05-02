@@ -8,8 +8,12 @@
 import SwiftUI
 
 
+struct Wednesday: View {
+    var body: some View {
+        VStack{}
+    }
+}
 
-//struct Wednesday: View {
 //    @State var newWorkout: String = ""
 //    @State var newSets: Int = 0
 //    @State var newReps: Int = 0
