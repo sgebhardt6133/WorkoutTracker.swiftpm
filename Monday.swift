@@ -15,6 +15,8 @@ struct Monday: View {
         AddWorkoutView(workoutList: $workoutList)
 
     }
+    
+   
 }
 
 
