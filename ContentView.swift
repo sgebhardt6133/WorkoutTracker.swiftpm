@@ -32,7 +32,7 @@ struct ContentView: View {
             }
         }
         .navigationViewStyle(.stack)
-//        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
         
     }
 }
