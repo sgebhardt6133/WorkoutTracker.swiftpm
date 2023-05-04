@@ -9,6 +9,9 @@ import SwiftUI
 
 struct Exercise: Hashable, Codable {
     
+
+    
+    
     var Workout:String
     var Sets:Int
     var Reps:Int
