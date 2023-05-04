@@ -11,8 +11,8 @@ struct AddWorkoutView: View {
     
     @Binding var workoutList:[WorkoutInfo]
     @State var newExercise: String = ""
-    @State var newSets: Int?
-    @State var newReps: Int?
+    @State var newSets: String  = ""
+    @State var newReps: String = ""
     @State var newWeight: Int?
     
     var body: some View {
@@ -20,10 +20,10 @@ struct AddWorkoutView: View {
             TextField("Enter Exercise", text: $newExercise)
                 .border(.black)
             
-            TextField("Enter sets", value: $newSets, format: .number)
+            TextField("Enter sets", text: $newSets)
                 .border(.black)
             
-            TextField("Enter reps", value: $newReps, format: .number)
+            TextField("Enter reps", text: $newReps)
                 .border(.black)
             
             TextField("Enter weight (in lbs)", value: $newWeight, format: .number)
@@ -32,15 +32,15 @@ struct AddWorkoutView: View {
             Button("Add Exercise") {
                 
                 
-                guard let unwrappedSets = newSets else  { return }
-                guard let unwrappedReps = newReps else  { return }
+//                guard let unwrappedSets = newSets else  { return }
+//                guard let unwrappedReps = newReps else  { return }
                 guard let unwrappedWeight = newWeight else  { return }
                 
-                let newWorkout = WorkoutInfo(exercise: newExercise, sets: unwrappedSets, reps: unwrappedReps, weight: unwrappedWeight)
+                let newWorkout = WorkoutInfo(exercise: newExercise, sets: newSets, reps: newReps, weight: unwrappedWeight)
                 workoutList.append(newWorkout)
                 newExercise = ""
-                newSets = nil
-                newReps = nil
+                newSets = ""
+                newReps = ""
                 newWeight = nil
                 
             }
@@ -49,18 +49,12 @@ struct AddWorkoutView: View {
                 ForEach(workoutList, id: \.self){ currentWorkout in
                     WorkoutListView(currentWorkout: currentWorkout)
                 }
-                    //                if #available(iOS 16.0, *) {
-                    //                    List($workoutList, id: \.self, editActions: .delete) { workoutlist in
-                    //                                                        Text($workoutList)
-                    //                    }
-                    //                } else {
-                    //                    // Fallback on earlier versions
-                    //                }
-                                        .onDelete { (indexSet) in
-                                            if let index = indexSet.first {
-                                                self.workoutList.remove(at: index)
-                                            }
-                                        }
+                .onDelete { (indexSet) in
+                    if let index = indexSet.first {
+                        self.workoutList.remove(at: index)
+                    }
+                }
+                                    
             }
         }
     }

@@ -15,7 +15,7 @@ struct WorkoutListView: View {
         
         VStack{
             Text(currentWorkout.exercise)
-                .font(.largeTitle)
+                .fontWeight(.bold)
             Text("Sets: \(currentWorkout.sets)")
             Text("Reps: \(currentWorkout.reps)")
             Text("Weight: \(currentWorkout.weight)lbs")
