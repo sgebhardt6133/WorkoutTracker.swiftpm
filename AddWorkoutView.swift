@@ -26,7 +26,7 @@ struct AddWorkoutView: View {
             TextField("Enter reps", value: $newReps, format: .number)
                 .border(.black)
             
-            TextField("Enter weight", value: $newWeight, format: .number)
+            TextField("Enter weight (in lbs)", value: $newWeight, format: .number)
                 .border(.black)
             
             Button("Add Exercise") {
@@ -39,9 +39,9 @@ struct AddWorkoutView: View {
                 let newWorkout = WorkoutInfo(exercise: newExercise, sets: unwrappedSets, reps: unwrappedReps, weight: unwrappedWeight)
                 workoutList.append(newWorkout)
                 newExercise = ""
-                newSets = 0
-                newReps = 0
-                newWeight = 0
+                newSets = nil
+                newReps = nil
+                newWeight = nil
                 
             }
             List(workoutList, id: \.self){ currentWorkout in
