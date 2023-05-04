@@ -12,6 +12,11 @@ struct Friday: View {
     var body: some View {
         VStack{
             AddWorkoutView(workoutList: $workoutList)
+//                .onDelete { (indexSet) in
+//                    if let index = indexSet.first {
+//                        self.workoutList.remove(at: index)
+//                    }
+//                }
 
         }
         

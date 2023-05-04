@@ -15,3 +15,4 @@ struct WorkoutInfo: Hashable {
     var weight: Int
 }
 
+
