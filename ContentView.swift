@@ -7,6 +7,7 @@ struct ContentView: View {
     @State var ExerciseArray: [Exercise] = []
     var body: some View {
         NavigationView{
+           
             VStack{
                 NavigationLink(destination: Monday()) {
                                     Text("Monday")
