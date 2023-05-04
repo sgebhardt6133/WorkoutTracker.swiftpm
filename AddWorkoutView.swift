@@ -51,4 +51,3 @@ struct AddWorkoutView: View {
         }
     }
 }
-
