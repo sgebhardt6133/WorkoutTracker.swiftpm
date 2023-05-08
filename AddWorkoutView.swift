@@ -11,37 +11,55 @@ struct AddWorkoutView: View {
     
     @Binding var workoutList:[WorkoutInfo]
     @State var newExercise: String = ""
-    @State var newSets: Int?
-    @State var newReps: Int?
+    @State var newSets: String  = ""
+    @State var newReps: String = ""
     @State var newWeight: Int?
     @EnvironmentObject var itemsClass: ItemsClass
     
     var body: some View {
         VStack {
-            TextField("Enter Exercise", text: $newExercise)
-                .border(.black)
             
-            TextField("Enter sets", value: $newSets, format: .number)
-                .border(.black)
-            
-            TextField("Enter reps", value: $newReps, format: .number)
-                .border(.black)
-            
-            TextField("Enter weight (in lbs)", value: $newWeight, format: .number)
-                .border(.black)
+            HStack {
+                
+                VStack{
+                    
+                
+                TextField("Enter Exercise", text: $newExercise)
+                    .frame(width: 300, height: 20)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                
+                
+                TextField("Enter sets", text: $newSets)
+                    .frame(width: 300, height: 20)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                
+                TextField("Enter reps", text: $newReps)
+                    .frame(width: 300, height: 20)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                
+                TextField("Enter weight (in lbs)", value: $newWeight, format: .number)
+                    .frame(width: 300, height: 20)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+            }
+                Spacer()
+        }
             
             Button("Add Exercise") {
                 
                 
-                guard let unwrappedSets = newSets else  { return }
-                guard let unwrappedReps = newReps else  { return }
+//                guard let unwrappedSets = newSets else  { return }
+//                guard let unwrappedReps = newReps else  { return }
                 guard let unwrappedWeight = newWeight else  { return }
                 
-                let newWorkout = WorkoutInfo(exercise: newExercise, sets: unwrappedSets, reps: unwrappedReps, weight: unwrappedWeight)
+                let newWorkout = WorkoutInfo(exercise: newExercise, sets: newSets, reps: newReps, weight: unwrappedWeight)
                 workoutList.append(newWorkout)
                 newExercise = ""
-                newSets = nil
-                newReps = nil
+                newSets = ""
+                newReps = ""
                 newWeight = nil
                 
             }
@@ -50,12 +68,17 @@ struct AddWorkoutView: View {
                 ForEach(workoutList, id: \.self){ currentWorkout in
                     WorkoutListView(currentWorkout: currentWorkout)
                 }
-                                        .onDelete { (indexSet) in
-                                            if let index = indexSet.first {
-                                                self.workoutList.remove(at: index)
-                                            }
-                                        }
+                .onDelete { (indexSet) in
+                    if let index = indexSet.first {
+                        self.workoutList.remove(at: index)
+                    }
+                }
+                                    
             }
         }
     }
 }
+
+
+
+
