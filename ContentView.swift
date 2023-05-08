@@ -36,53 +36,113 @@ struct ContentView: View {
                             Text("Monday")
                                 .frame(width: 175, height: 70, alignment: .center)
                                 .foregroundColor(.white)
-                                .background(.orange)
                                 .font(.largeTitle)
                                 .cornerRadius(15)
+                                .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 200, height: 50)
+                                        .background(LinearGradient(
+                                            gradient: Gradient(
+                                                colors: [Color.yellow, Color.red]),
+                                            startPoint: .leading,
+                                            endPoint: .trailing))
+                                        .cornerRadius(25)
+                                        .shadow(radius: 10)
                         }
                         NavigationLink(destination: Tuesday()) {
                             Text("Tuesday")
                                 .frame(width: 175, height: 70, alignment: .center)
                                 .foregroundColor(.white)
-                                .background(.orange)
                                 .font(.largeTitle)
                                 .cornerRadius(15)
+                                .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 200, height: 50)
+                                        .background(LinearGradient(
+                                            gradient: Gradient(
+                                                colors: [Color.red, Color.yellow]),
+                                            startPoint: .leading,
+                                            endPoint: .trailing))
+                                        .cornerRadius(25)
+                                        .shadow(radius: 10)
                         }
                         
                         NavigationLink(destination: Wednesday()) {
                             Text("Wednesday")
                                 .frame(width: 175, height: 70, alignment: .center)
                                 .foregroundColor(.white)
-                                .background(.orange)
                                 .font(.largeTitle)
                                 .cornerRadius(15)
+                                .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 200, height: 50)
+                                        .background(LinearGradient(
+                                            gradient: Gradient(
+                                                colors: [Color.yellow, Color.red]),
+                                            startPoint: .leading,
+                                            endPoint: .trailing))
+                                        .cornerRadius(25)
+                                        .shadow(radius: 10)
                         }
                         
                         NavigationLink(destination: Thursday()) {
                             Text("Thursday")
                                 .frame(width: 175, height: 70, alignment: .center)
                                 .foregroundColor(.white)
-                                .background(.orange)
                                 .font(.largeTitle)
                                 .cornerRadius(15)
+                                .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 200, height: 50)
+                                        .background(LinearGradient(
+                                            gradient: Gradient(
+                                                colors: [Color.yellow, Color.blue]),
+                                            startPoint: .leading,
+                                            endPoint: .trailing))
+                                        .cornerRadius(25)
+                                        .shadow(radius: 10)
                         }
                         
                         NavigationLink(destination: Friday()) {
                             Text("Friday")
                                 .frame(width: 175, height: 70, alignment: .center)
                                 .foregroundColor(.white)
-                                .background(.orange)
                                 .font(.largeTitle)
                                 .cornerRadius(15)
+                                .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 200, height: 50)
+                                        .background(LinearGradient(
+                                            gradient: Gradient(
+                                                colors: [Color.blue, Color.cyan]),
+                                            startPoint: .leading,
+                                            endPoint: .trailing))
+                                        .cornerRadius(25)
+                                        .shadow(radius: 10)
                         }
                         
                         NavigationLink(destination: Saturday()) {
                             Text("Saturday")
                                 .frame(width: 175, height: 70, alignment: .center)
                                 .foregroundColor(.white)
-                                .background(.orange)
                                 .font(.largeTitle)
                                 .cornerRadius(15)
+                                .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 200, height: 50)
+                                        .background(LinearGradient(
+                                            gradient: Gradient(
+                                                colors: [Color.cyan, Color.blue]),
+                                            startPoint: .leading,
+                                            endPoint: .trailing))
+                                        .cornerRadius(25)
+                                        .shadow(radius: 10)
                         }
                         
                         
@@ -90,9 +150,19 @@ struct ContentView: View {
                             Text("Sunday")
                                 .frame(width: 175, height: 70, alignment: .center)
                                 .foregroundColor(.white)
-                                .background(.orange)
                                 .font(.largeTitle)
                                 .cornerRadius(15)
+                                .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 200, height: 50)
+                                        .background(LinearGradient(
+                                            gradient: Gradient(
+                                                colors: [Color.blue, Color.cyan]),
+                                            startPoint: .leading,
+                                            endPoint: .trailing))
+                                        .cornerRadius(25)
+                                        .shadow(radius: 10)
                         }
                     }
                 }
