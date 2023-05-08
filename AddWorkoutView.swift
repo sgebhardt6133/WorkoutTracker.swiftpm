@@ -14,20 +14,39 @@ struct AddWorkoutView: View {
     @State var newSets: String  = ""
     @State var newReps: String = ""
     @State var newWeight: Int?
+    @EnvironmentObject var itemsClass: ItemsClass
     
     var body: some View {
         VStack {
-            TextField("Enter Exercise", text: $newExercise)
-                .border(.black)
             
-            TextField("Enter sets", text: $newSets)
-                .border(.black)
-            
-            TextField("Enter reps", text: $newReps)
-                .border(.black)
-            
-            TextField("Enter weight (in lbs)", value: $newWeight, format: .number)
-                .border(.black)
+            HStack {
+                
+                VStack{
+                    
+                
+                TextField("Enter Exercise", text: $newExercise)
+                    .frame(width: 300, height: 20)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                
+                
+                TextField("Enter sets", text: $newSets)
+                    .frame(width: 300, height: 20)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                
+                TextField("Enter reps", text: $newReps)
+                    .frame(width: 300, height: 20)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                
+                TextField("Enter weight (in lbs)", value: $newWeight, format: .number)
+                    .frame(width: 300, height: 20)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+            }
+                Spacer()
+        }
             
             Button("Add Exercise") {
                 
@@ -44,8 +63,8 @@ struct AddWorkoutView: View {
                 newWeight = nil
                 
             }
-            List{
-                
+            List(){
+                    
                 ForEach(workoutList, id: \.self){ currentWorkout in
                     WorkoutListView(currentWorkout: currentWorkout)
                 }

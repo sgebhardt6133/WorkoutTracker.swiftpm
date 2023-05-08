@@ -18,7 +18,7 @@ struct Exercise: Hashable, Codable {
     var Weight:Int
 }
 class ItemsClass: ObservableObject{
-    @State var ExerciseArray: [Exercise] = []
+    @Published var ExerciseArray: [Exercise] = []
     @State var itemsKey: String = "items_key"
        
        init() {
