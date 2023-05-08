@@ -14,6 +14,7 @@ struct AddWorkoutView: View {
     @State var newSets: String  = ""
     @State var newReps: String = ""
     @State var newWeight: Int?
+    @EnvironmentObject var itemsClass: ItemsClass
     
     var body: some View {
         VStack {
@@ -62,8 +63,8 @@ struct AddWorkoutView: View {
                 newWeight = nil
                 
             }
-            List{
-                
+            List(){
+                    
                 ForEach(workoutList, id: \.self){ currentWorkout in
                     WorkoutListView(currentWorkout: currentWorkout)
                 }
