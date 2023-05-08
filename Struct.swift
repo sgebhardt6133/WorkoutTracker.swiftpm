@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct Exercise: Hashable, Codable {
-    
 
     
     
@@ -41,3 +40,4 @@ class ItemsClass: ObservableObject{
             self.ExerciseArray = saveditems
         }
 }
+
