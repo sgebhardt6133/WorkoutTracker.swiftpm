@@ -14,6 +14,7 @@ struct AddWorkoutView: View {
     @State var newSets: Int?
     @State var newReps: Int?
     @State var newWeight: Int?
+    @EnvironmentObject var itemsClass: ItemsClass
     
     var body: some View {
         VStack {
@@ -44,18 +45,11 @@ struct AddWorkoutView: View {
                 newWeight = nil
                 
             }
-            List{
-                
+            List(){
+                    
                 ForEach(workoutList, id: \.self){ currentWorkout in
                     WorkoutListView(currentWorkout: currentWorkout)
                 }
-                    //                if #available(iOS 16.0, *) {
-                    //                    List($workoutList, id: \.self, editActions: .delete) { workoutlist in
-                    //                                                        Text($workoutList)
-                    //                    }
-                    //                } else {
-                    //                    // Fallback on earlier versions
-                    //                }
                                         .onDelete { (indexSet) in
                                             if let index = indexSet.first {
                                                 self.workoutList.remove(at: index)
