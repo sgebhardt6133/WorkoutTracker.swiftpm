@@ -10,8 +10,8 @@ import SwiftUI
 struct WorkoutInfo: Hashable {
     
     var exercise:  String
-    var sets: Int
-    var reps: Int
+    var sets: String
+    var reps: String
     var weight: Int
 }
 
