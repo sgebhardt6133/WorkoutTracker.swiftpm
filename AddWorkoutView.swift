@@ -72,6 +72,8 @@ struct AddWorkoutView: View {
                     if let index = indexSet.first {
                         self.workoutList.remove(at: index)
                     }
+                    WorkoutManager()
+                        .setWorkout(workoutList: workoutList)
                 }
                                     
             }
@@ -82,3 +84,4 @@ struct AddWorkoutView: View {
 
 
 
+  
