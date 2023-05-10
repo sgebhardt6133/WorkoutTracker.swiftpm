@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var workoutList: [WorkoutInfo] = []
     @State var workout:String = ""
     @State var Sets:Int = 0
     @State var Reps:Int = 0
-    @State var ExerciseArray: [Exercise] = []
+
     var body: some View {
         NavigationView{
             ZStack{
