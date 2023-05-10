@@ -15,7 +15,8 @@ struct Monday: View {
     
     var body: some View {
         AddWorkoutView(workoutList: $workoutList)
-
+        
+        Image("Legs")
     }
     
    
