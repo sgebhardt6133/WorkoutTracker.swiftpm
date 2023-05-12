@@ -33,7 +33,6 @@ struct AddWorkoutView: View {
                             .padding()
                         
                         
-                        
                         TextField("Enter sets", text: $newSets)
                             .frame(width: 300, height: 20)
                             .textFieldStyle(.roundedBorder)
