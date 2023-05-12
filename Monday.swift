@@ -10,13 +10,13 @@ import SwiftUI
 struct Monday: View {
     
     @State var workoutList:[WorkoutInfo] = []
-    @EnvironmentObject var items: ItemsClass
+ 
 
     
     var body: some View {
         AddWorkoutView(workoutList: $workoutList)
         
-        Image("Legs")
+//        Image("Legs")
     }
     
    

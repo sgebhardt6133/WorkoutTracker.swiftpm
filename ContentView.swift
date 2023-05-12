@@ -1,6 +1,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var mondayList: [WorkoutInfo] = []
+    @State var tuesdayList: [WorkoutInfo] = []
+    @State var wednesdayList: [WorkoutInfo] = []
+    @State var thursdayList: [WorkoutInfo] = []
+    @State var fridayList: [WorkoutInfo] = []
+    @State var saturdayList: [WorkoutInfo] = []
+    @State var sundayList: [WorkoutInfo] = []
+    
     @State var workoutList: [WorkoutInfo] = []
     @State var workout:String = ""
     @State var Sets:Int = 0
@@ -8,6 +16,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView{
+            
             ZStack{
                 Image("Steve")
                     .offset(x: 140, y: 330)
