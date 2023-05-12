@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WorkoutInfo: Hashable {
+struct WorkoutInfo: Hashable, Codable {
     
     var exercise:  String
     var sets: String

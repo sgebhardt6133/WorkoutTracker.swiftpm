@@ -10,7 +10,7 @@ import SwiftUI
 struct WorkoutListView: View {
     
     let currentWorkout:WorkoutInfo
-    @EnvironmentObject var items: ItemsClass
+   
     
     var body: some View {
         

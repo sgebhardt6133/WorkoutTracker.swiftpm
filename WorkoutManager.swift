@@ -7,24 +7,24 @@
 
 import SwiftUI
 
-//struct WorkoutManager {
-//    func getWorkout() -> [currentWorkout] {
-//        if let object = UserDefaults.standard.value(forKey: "Workout") as? Data {
-//            if let objectDecoded = try? JSONDecoder().decode(Array.self, from: object) as [currentWorkout] {
-//                return objectDecoded
-//            }
-//        } else {
-//            print("Decoding Failed")
-//        }
-//        return [currentWorkout]()
-//    }
-//
-//    func setAssignments(assignments: [Assignment]) {
-//        if let encoded = try? JSONEncoder().encode(assignments){
-//            UserDefaults.standard.set(encoded, forKey: "assignments")
-//        } else {
-//            print("Encoding Failed")
-//        }
-//
-//    }
-//}
+struct WorkoutManager {
+    
+    func getWorkout() -> [WorkoutInfo] {
+        if let object = UserDefaults.standard.value(forKey: "workoutInfo") as? Data {
+            if let objectDecoded = try? JSONDecoder().decode(Array.self, from: object) as [WorkoutInfo] {
+                return objectDecoded
+            }
+        } else {
+            print("Decoding Failed")
+        }
+        return  [WorkoutInfo]()
+    }
+    
+    func setWorkout(workoutList: [WorkoutInfo]) {
+        if let encoded = try? JSONEncoder().encode(workoutList){
+            UserDefaults.standard.set(encoded, forKey: "workoutInfo")
+        } else {
+            print("Encoding Failed")
+        }
+    }
+}
