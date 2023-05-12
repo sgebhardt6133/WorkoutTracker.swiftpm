@@ -8,7 +8,7 @@ import SwiftUI
 
 struct Sunday: View {
     @State var workoutList:[WorkoutInfo] = []
-    @EnvironmentObject var items: ItemsClass
+  
 
     var body: some View {
         VStack{
