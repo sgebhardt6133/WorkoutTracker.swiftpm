@@ -78,7 +78,7 @@ struct AddWorkoutView: View {
                             workoutList = WorkoutManager().getWorkout()
                         })
                         
-                    List() {
+                    List {
                         
                         ForEach(workoutList, id: \.self){ currentWorkout in
                             WorkoutListView(currentWorkout: currentWorkout)
