@@ -81,6 +81,11 @@ struct AddWorkoutView: View {
                         
                         ForEach(workoutList, id: \.self){ currentWorkout in
                             WorkoutListView(currentWorkout: currentWorkout)
+                                .listRowBackground((LinearGradient(
+                                    gradient: Gradient(
+                                        colors: [Color.cyan, Color.blue]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing)))
                         }
                         .onDelete { (indexSet) in
                             if let index = indexSet.first {
