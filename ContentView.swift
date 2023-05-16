@@ -60,7 +60,7 @@ struct ContentView: View {
                                         .frame(width: 200, height: 50)
                                         .background(LinearGradient(
                                             gradient: Gradient(
-                                                colors: [Color.yellow, Color.red]),
+                                                colors: [Color.blue, Color.cyan]),
                                             startPoint: .leading,
                                             endPoint: .trailing))
                                         .cornerRadius(25)
@@ -78,7 +78,7 @@ struct ContentView: View {
                                         .frame(width: 200, height: 50)
                                         .background(LinearGradient(
                                             gradient: Gradient(
-                                                colors: [Color.red, Color.yellow]),
+                                                colors: [Color.cyan, Color.blue]),
                                             startPoint: .leading,
                                             endPoint: .trailing))
                                         .cornerRadius(25)
@@ -97,7 +97,7 @@ struct ContentView: View {
                                         .frame(width: 200, height: 50)
                                         .background(LinearGradient(
                                             gradient: Gradient(
-                                                colors: [Color.yellow, Color.red]),
+                                                colors: [Color.blue, Color.cyan]),
                                             startPoint: .leading,
                                             endPoint: .trailing))
                                         .cornerRadius(25)
@@ -116,7 +116,7 @@ struct ContentView: View {
                                         .frame(width: 200, height: 50)
                                         .background(LinearGradient(
                                             gradient: Gradient(
-                                                colors: [Color.yellow, Color.blue]),
+                                                colors: [Color.cyan, Color.blue]),
                                             startPoint: .leading,
                                             endPoint: .trailing))
                                         .cornerRadius(25)
