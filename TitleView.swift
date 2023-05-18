@@ -13,9 +13,14 @@ struct TitleView: View {
                 VStack{
                     
                     VStack {
-                        Text("Welcome to Workout Tracker")
+                        Text("Welcome to ")
                             .font(.largeTitle)
-                    }
+                        Text("Workout Tracker")
+                            .font(.largeTitle)
+                                                }
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 200, height: 200)
                     
                     NavigationLink(destination: ContentView()) {
                         Text("Go to App")
