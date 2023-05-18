@@ -9,12 +9,14 @@ import SwiftUI
 
 struct Monday: View {
     
-    @State var workoutList:[WorkoutInfo] = []
+
+    @State var mondayList:[WorkoutInfo] = []
+    
  
 
     
     var body: some View {
-        AddWorkoutView(workoutList: $workoutList)
+        AddMondayView(mondayList: $mondayList)
         
 //        Image("Legs")
     }
