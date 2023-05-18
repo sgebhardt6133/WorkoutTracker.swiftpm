@@ -12,18 +12,29 @@ struct TitleView: View {
             NavigationView {
                 VStack{
                     
-                    Text("WorkoutTracker")
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundColor(.white)
+                    VStack {
+                        Text("Welcome to Workout Tracker")
+                            .font(.largeTitle)
+                    }
                     
-                    NavigationLink(destination: ContentView()) { 
+                    NavigationLink(destination: ContentView()) {
                         Text("Go to App")
                             .frame(width: 175, height: 70, alignment: .center)
                             .foregroundColor(.white)
-                            .background(.blue)
                             .font(.largeTitle)
                             .cornerRadius(15)
+                            .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .frame(width: 200, height: 50)
+                                    .background(LinearGradient(
+                                        gradient: Gradient(
+                                            colors: [Color.blue, Color.cyan]),
+                                        startPoint: .leading,
+                                        endPoint: .trailing))
+                                    .cornerRadius(25)
+                                    .shadow(radius: 10)
+
                         
                         
                     }
