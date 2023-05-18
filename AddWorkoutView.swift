@@ -7,9 +7,17 @@
 
 import SwiftUI
 
-struct AddWorkoutView: View {
-    
-    @Binding var workoutList:[WorkoutInfo]
+struct AddMondayView: View {
+    @Binding var mondayList: [WorkoutInfo] 
+//    @Binding var tuesdayList: [WorkoutInfo] 
+//    @Binding var wednesdayList: [WorkoutInfo] 
+//    @Binding var thursdayList: [WorkoutInfo]
+//    @Binding var fridayList: [WorkoutInfo] 
+//    @Binding var saturdayList: [WorkoutInfo] 
+//    @Binding var sundayList: [WorkoutInfo] 
+                                
+                                
+//    @Binding var workoutList:[WorkoutInfo]
     @State var newExercise: String = ""
     @State var newSets: String  = ""
     @State var newReps: String = ""
@@ -24,7 +32,7 @@ struct AddWorkoutView: View {
                 
                 HStack {
                     
-                    VStack{
+                    VStack {
                         
                         
                         TextField("Enter Exercise", text: $newExercise)
@@ -59,9 +67,10 @@ struct AddWorkoutView: View {
                     guard let unwrappedWeight = newWeight else  { return }
                     
                     let newWorkout = WorkoutInfo(exercise: newExercise, sets: newSets, reps: newReps, weight: unwrappedWeight)
-                    workoutList.append(newWorkout)
+                    mondayList.append(newWorkout)
                     
-                    WorkoutManager().setWorkout(workoutList: workoutList)
+//                    WorkoutManager().setWorkout(workoutList: workoutList)
+                    WorkoutManager().setMonday(mondayList: mondayList)
                     
                     newExercise = ""
                     newSets = ""
@@ -74,20 +83,23 @@ struct AddWorkoutView: View {
                     }
                 }
                         .onAppear(perform: {
-                            workoutList = WorkoutManager().getWorkout()
+//                            workoutList = WorkoutManager().getWorkout()
+                            
+                            mondayList = WorkoutManager().getMonday()
+                            
                         })
                         
                     List {
                         
-                        ForEach(workoutList, id: \.self){ currentWorkout in
-                            WorkoutListView(currentWorkout: currentWorkout)
+                        ForEach(mondayList, id: \.self){ currentWorkout in
+                            MondayListView(currentWorkout: currentWorkout)
                         }
                         .onDelete { (indexSet) in
                             if let index = indexSet.first {
-                                self.workoutList.remove(at: index)
+                                self.mondayList.remove(at: index)
                             }
-                            WorkoutManager()
-                                .setWorkout(workoutList: workoutList)
+                          
+                            WorkoutManager().setMonday(mondayList: mondayList)
                         }
                         
                     }
@@ -96,7 +108,7 @@ struct AddWorkoutView: View {
         }
     
     func updateArray() {
-        WorkoutManager().setWorkout(workoutList: workoutList)
+        WorkoutManager().setMonday(mondayList: mondayList)
     }
     
     }

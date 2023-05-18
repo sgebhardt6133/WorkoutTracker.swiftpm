@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WorkoutListView: View {
+struct MondayListView: View {
     
     let currentWorkout:WorkoutInfo
    

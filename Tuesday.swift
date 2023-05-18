@@ -7,13 +7,14 @@
 
 import SwiftUI
 struct Tuesday: View {
-    @State var workoutList:[WorkoutInfo] = []
+    @State var tuesdayList:[WorkoutInfo] = []
   
 
     var body: some View {
         VStack{
-            AddWorkoutView(workoutList: $workoutList)
-Image("Stuff")
+            
+            AddTuesdayView(tuesdayList: $tuesdayList)
+
         }
     }
 }
