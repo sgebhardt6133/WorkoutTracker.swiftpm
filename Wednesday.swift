@@ -14,8 +14,8 @@ struct Wednesday: View {
 
     var body: some View {
         VStack{
-            AddWorkoutView(workoutList: $workoutList)
-Image("IDK")
+//            AddWorkoutView(workoutList: $workoutList)
+//Image("IDK")
         }
     }
 }

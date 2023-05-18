@@ -11,8 +11,8 @@ struct Friday: View {
     @State var workoutList:[WorkoutInfo] = []
     var body: some View {
         VStack{
-            AddWorkoutView(workoutList: $workoutList)
-            Image("Weird")
+//            AddWorkoutView(workoutList: $workoutList)
+//            Image("Weird")
 //                .onDelete { (indexSet) in
 //                    if let index = indexSet.first {
 //                        self.workoutList.remove(at: index)
