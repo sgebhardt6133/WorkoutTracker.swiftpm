@@ -11,6 +11,7 @@ struct TitleScreen: View {
     var body: some View {
             NavigationView {
                 VStack {
+                    Image("logo")
                     NavigationLink("Go to app") {
                         
                     }
@@ -18,4 +19,5 @@ struct TitleScreen: View {
         }
     }
 }
+
 
