@@ -20,25 +20,31 @@ struct ContentView: View {
             ZStack{
                 Image("Steve")
                     .offset(x: 140, y: 330)
+                    .opacity(0.4)
                 ZStack{
                     Image("Weights")
                         .offset(x: -120,y: -300)
+                        .opacity(0.4)
+
                     Image("Barbell")
                         .offset(x: -120, y: -150)
+                        .opacity(0.4)
                     Image("People")
                         .offset(x: -100,y: -10)
+                        .opacity(0.4)
                     Image("Women")
-                        .offset(x: -120, y: 150)
+                        .offset(x: -120, y: 150)                    .opacity(0.4)
                     Image("Walking")
-                        .offset(x: -120, y :325)
+                        .offset(x: -120, y :325)                    .opacity(0.4)
                     Image("Gym")
-                        .offset(x: 140, y: -303)
+                        .offset(x: 140, y: -303)                    .opacity(0.4)
                     Image("Dude")
-                        .offset(x: 140, y: -150)
+                        .offset(x: 140, y: -150)                    .opacity(0.4)
                     Image("Get it")
-                        .offset(x: 140, y: 1)
+                        .offset(x: 140, y: 1)                    .opacity(0.4)
                     Image("Rename")
-                        .offset(x: 140, y: 150)
+                        .offset(x: 140, y: 150)                    .opacity(0.4)
+                    
                     
                     
                     VStack{
@@ -54,7 +60,7 @@ struct ContentView: View {
                                         .frame(width: 200, height: 50)
                                         .background(LinearGradient(
                                             gradient: Gradient(
-                                                colors: [Color.yellow, Color.red]),
+                                                colors: [Color.blue, Color.cyan]),
                                             startPoint: .leading,
                                             endPoint: .trailing))
                                         .cornerRadius(25)
@@ -72,7 +78,7 @@ struct ContentView: View {
                                         .frame(width: 200, height: 50)
                                         .background(LinearGradient(
                                             gradient: Gradient(
-                                                colors: [Color.red, Color.yellow]),
+                                                colors: [Color.cyan, Color.blue]),
                                             startPoint: .leading,
                                             endPoint: .trailing))
                                         .cornerRadius(25)
@@ -91,7 +97,7 @@ struct ContentView: View {
                                         .frame(width: 200, height: 50)
                                         .background(LinearGradient(
                                             gradient: Gradient(
-                                                colors: [Color.yellow, Color.red]),
+                                                colors: [Color.blue, Color.cyan]),
                                             startPoint: .leading,
                                             endPoint: .trailing))
                                         .cornerRadius(25)
@@ -110,7 +116,7 @@ struct ContentView: View {
                                         .frame(width: 200, height: 50)
                                         .background(LinearGradient(
                                             gradient: Gradient(
-                                                colors: [Color.yellow, Color.blue]),
+                                                colors: [Color.cyan, Color.blue]),
                                             startPoint: .leading,
                                             endPoint: .trailing))
                                         .cornerRadius(25)
@@ -175,6 +181,8 @@ struct ContentView: View {
                                         .shadow(radius: 10)
                         }
                     }
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+
                 }
             }
         }
