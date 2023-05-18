@@ -9,15 +9,6 @@ import SwiftUI
 
 struct AddTuesdayView: View {
     @Binding var tuesdayList: [WorkoutInfo] 
-    //    @Binding var tuesdayList: [WorkoutInfo] 
-    //    @Binding var wednesdayList: [WorkoutInfo] 
-    //    @Binding var thursdayList: [WorkoutInfo]
-    //    @Binding var fridayList: [WorkoutInfo] 
-    //    @Binding var saturdayList: [WorkoutInfo] 
-    //    @Binding var sundayList: [WorkoutInfo] 
-    
-    
-    //    @Binding var workoutList:[WorkoutInfo]
     @State var tuesdayExercise: String = ""
     @State var tuesdaySets: String  = ""
     @State var tuesdayReps: String = ""
