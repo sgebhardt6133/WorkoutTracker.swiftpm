@@ -123,11 +123,6 @@ struct AddMondayView: View {
         WorkoutManager().setMonday(mondayList: mondayList)
     }
     
+    
     }
  
-
-
-
-
-
-
