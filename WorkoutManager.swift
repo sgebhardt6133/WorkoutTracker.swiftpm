@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WorkoutManager {
     
-
+    
     
     //////
     
@@ -68,7 +68,7 @@ struct WorkoutManager {
     
     func setWednesday(wednesdayList: [WorkoutInfo]) {
         if let encoded3 = try? JSONEncoder().encode(wednesdayList){
-            UserDefaults.standard.set(encoded3, forKey: "wednesdayList")
+            UserDefaults.standard.set(encoded3, forKey: "wednesdayInfo")
         } else {
             print("Encoding Failed")
         }
