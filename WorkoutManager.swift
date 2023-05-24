@@ -74,10 +74,13 @@ struct WorkoutManager {
         }
     }
     
-    func getFriday() -> [WorkoutInfo] {
-        if let object5 = UserDefaults.standard.value(forKey: "fridayInfo") as? Data {
-            if let object5Decoded = try? JSONDecoder().decode(Array.self, from: object5) as [WorkoutInfo] {
-                return object5Decoded
+    
+    //////
+    
+    func getThursday() -> [WorkoutInfo] {
+        if let object4 = UserDefaults.standard.value(forKey: "thursdayInfo") as? Data {
+            if let object4Decoded = try? JSONDecoder().decode(Array.self, from: object4) as [WorkoutInfo] {
+                return object4Decoded
                 
             }
         } else {
@@ -85,17 +88,12 @@ struct WorkoutManager {
         }
         return  [WorkoutInfo]()
     }
-
-    func setFriday(fridayList: [WorkoutInfo]) {
-        if let encoded5 = try? JSONEncoder().encode(fridayList){
-            UserDefaults.standard.set(encoded5, forKey: "fridayInfo")
+    
+    func setThursday(thursdayList: [WorkoutInfo]) {
+        if let encoded4 = try? JSONEncoder().encode(thursdayList){
+            UserDefaults.standard.set(encoded4, forKey: "thursdayInfo")
         } else {
             print("Encoding Failed")
         }
     }
 }
-
-
-
-
-
