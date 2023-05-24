@@ -18,6 +18,7 @@ struct FridayListView: View {
             Text("Reps: \(currentWorkout.reps)")
             Text("Weight: \(currentWorkout.weight)")
 
+            
         }
     }
 }
