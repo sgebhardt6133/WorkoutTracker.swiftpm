@@ -96,4 +96,24 @@ struct WorkoutManager {
             print("Encoding Failed")
         }
     }
+    func getSaturday() -> [WorkoutInfo] {
+        if let object6 = UserDefaults.standard.value(forKey: "saturdayInfo") as? Data {
+            if let object6Decoded = try? JSONDecoder().decode(Array.self, from: object6) as [WorkoutInfo] {
+                return object6Decoded
+                
+            }
+        } else {
+            print("Decoding Failed")
+        }
+        return  [WorkoutInfo]()
+    }
+    
+    func setSaturday(saturdayList: [WorkoutInfo]) {
+        if let encoded6 = try? JSONEncoder().encode(saturdayList){
+            UserDefaults.standard.set(encoded6, forKey: "saturdayInfo")
+        } else {
+            print("Encoding Failed")
+        }
+    }
 }
+
