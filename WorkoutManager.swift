@@ -139,5 +139,24 @@ func setFriday(fridayList: [WorkoutInfo]) {
             print("Encoding Failed")
         }
     }
+    func getSunday() -> [WorkoutInfo] {
+        if let object7 = UserDefaults.standard.value(forKey: "sundayInfo") as? Data {
+            if let object7Decoded = try? JSONDecoder().decode(Array.self, from: object7) as [WorkoutInfo] {
+                return object7Decoded
+                
+            }
+        } else {
+            print("Decoding Failed")
+        }
+        return  [WorkoutInfo]()
+    }
+    
+    func setSunday(sundayList: [WorkoutInfo]) {
+        if let encoded7 = try? JSONEncoder().encode(sundayList){
+            UserDefaults.standard.set(encoded7, forKey: "sundayInfo")
+        } else {
+            print("Encoding Failed")
+        }
+    }
 }
 
