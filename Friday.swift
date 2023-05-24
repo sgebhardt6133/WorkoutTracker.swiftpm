@@ -8,19 +8,12 @@
 import SwiftUI
 
 struct Friday: View {
-    @State var workoutList:[WorkoutInfo] = []
+    @State var fridayList:[WorkoutInfo] = []
     var body: some View {
         VStack{
-//            AddWorkoutView(workoutList: $workoutList)
-//            Image("Weird")
-//                .onDelete { (indexSet) in
-//                    if let index = indexSet.first {
-//                        self.workoutList.remove(at: index)
-//                    }
-//                }
+            AddFridayView(fridayList: $fridayList)
 
         }
-        
     }
 }
 
