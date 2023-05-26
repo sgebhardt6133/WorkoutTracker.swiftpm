@@ -2,14 +2,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State var mondayList: [WorkoutInfo] = []
-//    @State var tuesdayList: [WorkoutInfo] = []
-//    @State var wednesdayList: [WorkoutInfo] = []
-//    @State var thursdayList: [WorkoutInfo] = []
-//    @State var fridayList: [WorkoutInfo] = []
-//    @State var saturdayList: [WorkoutInfo] = []
-//    @State var sundayList: [WorkoutInfo] = []
-    
-//    @State var workoutList: [WorkoutInfo] = []
     @State var workout:String = ""
     @State var Sets:Int = 0
     @State var Reps:Int = 0
@@ -180,6 +172,29 @@ struct ContentView: View {
                                         .cornerRadius(25)
                                         .shadow(radius: 10)
                         }
+                        
+                        NavigationLink(destination: MacroView()) {
+                            Text("** **NEW** **\nCalorie/Macro Tracker")
+                                .frame(width: 400, height: 120, alignment: .center)
+                                .foregroundColor(.white)
+                                .font(.largeTitle)
+                                .cornerRadius(15)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(width:350, height: 120)
+                                .background(LinearGradient(
+                                    gradient: Gradient(
+                                        colors: [Color.cyan, Color.blue]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing))
+                                .cornerRadius(25)
+                                .shadow(radius: 10)
+                            
+                        }
+                        
+                        
+                        
                     }
                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
