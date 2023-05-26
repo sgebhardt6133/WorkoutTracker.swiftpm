@@ -73,6 +73,17 @@ struct AddThursdayView: View {
                         
                     }
                 }
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 200, height: 50)
+                .background(LinearGradient(
+                    gradient: Gradient(
+                        colors: [Color.blue, Color.cyan]),
+                    startPoint: .leading,
+                    endPoint: .trailing))
+                .cornerRadius(25)
+                .shadow(radius: 10)
+                
                 .onAppear(perform: {
                     //                            workoutList = WorkoutManager().getWorkout()
                     

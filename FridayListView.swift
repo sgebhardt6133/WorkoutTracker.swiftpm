@@ -18,6 +18,7 @@ struct FridayListView: View {
             Text("Sets: \(currentWorkout.sets)")
             Text("Reps: \(currentWorkout.reps)")
             Text("Weight: \(currentWorkout.weight)")
+
             
             }
         let reps1 = Int(currentWorkout.reps)
