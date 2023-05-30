@@ -16,9 +16,11 @@ struct Monday: View {
 
     
     var body: some View {
+        Image("logo")
+            .resizable()
+            .frame(width: 200, height: 200)
         AddMondayView(mondayList: $mondayList)
         
-//        Image("Legs")
     }
     
    
