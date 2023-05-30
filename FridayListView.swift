@@ -21,8 +21,8 @@ struct FridayListView: View {
 
             
             }
-        let reps1 = Int(currentWorkout.reps)
-        let sets1 = Int(currentWorkout.sets)
+//        let reps1 = Int(currentWorkout.reps)
+//        let sets1 = Int(currentWorkout.sets)
 //        func TotalWeight(){
 //            totalWeight = WorkoutInfo.sets * WorkoutInfo.reps * WorkoutInfo.weight
 //        }
