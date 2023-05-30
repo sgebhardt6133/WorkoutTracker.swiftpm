@@ -112,6 +112,6 @@ struct AddFridayView: View {
         WorkoutManager().setFriday(fridayList: fridayList)
     }
 
-
+        
     }
 

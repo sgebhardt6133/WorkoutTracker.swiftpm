@@ -12,6 +12,9 @@ struct Sunday: View {
 
     var body: some View {
         VStack{
+            Image("logo")
+                .resizable()
+                .frame(width: 200, height: 200)
             AddSundayView(sundayList: $sundayList)
         }
     }
