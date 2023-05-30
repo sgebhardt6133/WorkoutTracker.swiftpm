@@ -13,6 +13,7 @@ struct Sunday: View {
     var body: some View {
         VStack{
             AddSundayView(sundayList: $sundayList)
+            
         }
     }
 }
