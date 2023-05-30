@@ -13,18 +13,23 @@ struct FridayListView: View {
     
     var body: some View {
         VStack{
+//            let reps1 = Int(currentWorkout.reps)
+//            let sets1 = Int(currentWorkout.sets)
+
             Text(currentWorkout.exercise)
                 .fontWeight(.bold)
             Text("Sets: \(currentWorkout.sets)")
             Text("Reps: \(currentWorkout.reps)")
             Text("Weight: \(currentWorkout.weight)")
-
+            Button("Total Weight Lifted"){
+//                totalWeight = currentWorkout.sets * currentWorkout.reps * currentWorkout.weight
+            }
             
             }
 //        let reps1 = Int(currentWorkout.reps)
 //        let sets1 = Int(currentWorkout.sets)
 //        func TotalWeight(){
 //            totalWeight = WorkoutInfo.sets * WorkoutInfo.reps * WorkoutInfo.weight
-//        }
-        }
+//      }
+    }
 }
