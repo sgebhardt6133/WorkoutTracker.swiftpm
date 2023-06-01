@@ -13,6 +13,10 @@ struct WorkoutInfo: Hashable, Codable {
     var sets: String
     var reps: String
     var weight: Int
+//    var month: Int
+//    var day: Int
+//    var year: Int
 }
+
 
 
