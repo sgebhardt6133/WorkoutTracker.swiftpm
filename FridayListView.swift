@@ -21,6 +21,7 @@ struct FridayListView: View {
             Text("Sets: \(currentWorkout.sets)")
             Text("Reps: \(currentWorkout.reps)")
             Text("Weight: \(currentWorkout.weight)")
+            Text("\(currentWorkout.month) \(currentWorkout.day) \(currentWorkout.year)")
             Button("Total Weight Lifted"){
 //                totalWeight = currentWorkout.sets * currentWorkout.reps * currentWorkout.weight
             }

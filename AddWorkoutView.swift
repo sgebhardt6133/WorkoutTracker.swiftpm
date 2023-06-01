@@ -22,6 +22,9 @@ struct AddMondayView: View {
     @State var newSets: String  = ""
     @State var newReps: String = ""
     @State var newWeight: Int?
+    @State var newMonth: Int?
+    @State var newDay: Int?
+    @State var newYear: Int?
     
     
     var body: some View {
@@ -55,6 +58,22 @@ struct AddMondayView: View {
                             .frame(width: 300, height: 20)
                             .textFieldStyle(.roundedBorder)
                             .padding()
+                        HStack{
+                            TextField("01", value: $newMonth, format: .number)
+                                .frame(width: 50, height: 20)
+                                .textFieldStyle(.roundedBorder)
+                                .padding(
+                                )
+                            TextField("01", value: $newDay, format: .number)
+                                .frame(width: 50, height: 20)
+                                .textFieldStyle(.roundedBorder)
+                                .padding()
+                            
+                            TextField("23", value: $newYear, format: .number)
+                                .frame(width: 50, height: 20)
+                                .textFieldStyle(.roundedBorder)
+                                .padding()
+                        }
                     }
                     Spacer()
                 }
@@ -65,8 +84,11 @@ struct AddMondayView: View {
                     //                guard let unwrappedSets = newSets else  { return }
                     //                guard let unwrappedReps = newReps else  { return }
                     guard let unwrappedWeight = newWeight else  { return }
+                    guard let unwrappedDay = newDay else  { return }
+                    guard let unwrappedMonth = newMonth else  { return }
+                    guard let unwrappedYear = newYear else  { return }
                     
-                    let newWorkout = WorkoutInfo(exercise: newExercise, sets: newSets, reps: newReps, weight: unwrappedWeight)
+                    let newWorkout = WorkoutInfo(exercise: newExercise, sets: newSets, reps: newReps, weight: unwrappedWeight, month: unwrappedMonth, day: unwrappedDay, year: unwrappedYear)
                     mondayList.append(newWorkout)
                     
 //                    WorkoutManager().setWorkout(workoutList: workoutList)
@@ -76,6 +98,10 @@ struct AddMondayView: View {
                     newSets = ""
                     newReps = ""
                     newWeight = nil
+                    newMonth = nil
+                    newDay = nil
+                    newYear = nil
+
                     
                     if newExercise != "" && newSets != "" && newReps != "" && newWeight != nil {
                         updateArray()

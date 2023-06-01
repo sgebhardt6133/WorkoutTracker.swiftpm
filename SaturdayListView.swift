@@ -17,6 +17,8 @@ struct SaturdayListView: View {
             Text("Sets: \(currentWorkout.sets)")
             Text("Reps: \(currentWorkout.reps)")
             Text("Weight: \(currentWorkout.weight)")
+            Text("\(currentWorkout.month) \(currentWorkout.day) \(currentWorkout.year)")
+
 
         }
     }

@@ -13,6 +13,9 @@ struct AddSundayView: View {
     @State var sundaySets: String = ""
     @State var sundayReps: String = ""
     @State var sundayWeight: Int?
+    @State var sundayMonth: Int?
+    @State var sundayDay: Int?
+    @State var sundayYear: Int?
     var body: some View {
         VStack{
 
@@ -43,6 +46,22 @@ struct AddSundayView: View {
                             .frame(width: 300, height: 20)
                             .textFieldStyle(.roundedBorder)
                             .padding()
+                        HStack{
+                            TextField("01", value: $sundayMonth, format: .number)
+                                .frame(width: 50, height: 20)
+                                .textFieldStyle(.roundedBorder)
+                                .padding(
+                                )
+                            TextField("01", value: $sundayDay, format: .number)
+                                .frame(width: 50, height: 20)
+                                .textFieldStyle(.roundedBorder)
+                                .padding()
+                            
+                            TextField("23", value: $sundayYear, format: .number)
+                                .frame(width: 50, height: 20)
+                                .textFieldStyle(.roundedBorder)
+                                .padding()
+                        }
                     }
                     Spacer()
                 }
@@ -53,8 +72,11 @@ struct AddSundayView: View {
                     //                guard let unwrappedSets = newSets else  { return }
                     //                guard let unwrappedReps = newReps else  { return }
                     guard let unwrappedSundayWeight = sundayWeight else  { return }
+                    guard let unwrappedSundayDay = sundayDay else  { return }
+                    guard let unwrappedSundayMonth = sundayMonth else  { return }
+                    guard let unwrappedSundayYear = sundayYear else  { return }
 
-                    let newSundayWorkout = WorkoutInfo(exercise: sundayExercise, sets: sundaySets, reps: sundayReps, weight: unwrappedSundayWeight)
+                    let newSundayWorkout = WorkoutInfo(exercise: sundayExercise, sets: sundaySets, reps: sundayReps, weight: unwrappedSundayWeight, month: unwrappedSundayMonth, day: unwrappedSundayDay, year: unwrappedSundayYear)
                     sundayList.append(newSundayWorkout)
 
 //                    WorkoutManager().setWorkout(workoutList: workoutList)
@@ -64,6 +86,10 @@ struct AddSundayView: View {
                     sundaySets = ""
                     sundayReps = ""
                     sundayWeight = nil
+                    sundayMonth = nil
+                    sundayDay = nil
+                    sundayYear = nil
+
 
                     if sundayExercise != "" && sundaySets != "" && sundayReps != "" && sundayWeight != nil {
                         updateArray()

@@ -13,6 +13,9 @@ struct AddThursdayView: View {
     @State var thursdaySets: String  = ""
     @State var thursdayReps: String = ""
     @State var thursdayWeight: Int?
+    @State var thursdayMonth: Int?
+    @State var thursdayDay: Int?
+    @State var thursdayYear: Int?
     
     
     var body: some View {
@@ -46,6 +49,22 @@ struct AddThursdayView: View {
                             .frame(width: 300, height: 20)
                             .textFieldStyle(.roundedBorder)
                             .padding()
+                        HStack{
+                            TextField("01", value: $thursdayMonth, format: .number)
+                                .frame(width: 50, height: 20)
+                                .textFieldStyle(.roundedBorder)
+                                .padding(
+                                )
+                            TextField("01", value: $thursdayDay, format: .number)
+                                .frame(width: 50, height: 20)
+                                .textFieldStyle(.roundedBorder)
+                                .padding()
+                            
+                            TextField("23", value: $thursdayYear, format: .number)
+                                .frame(width: 50, height: 20)
+                                .textFieldStyle(.roundedBorder)
+                                .padding()
+                        }
                     }
                     Spacer()
                 }
@@ -56,8 +75,11 @@ struct AddThursdayView: View {
                     //                guard let unwrappedSets = newSets else  { return }
                     //                guard let unwrappedReps = newReps else  { return }
                     guard let unwrappedThursdayWeight = thursdayWeight else  { return }
+                    guard let unwrappedThursdayDay = thursdayDay else  { return }
+                    guard let unwrappedThursdayMonth = thursdayMonth else  { return }
+                    guard let unwrappedThursdayYear = thursdayYear else  { return }
                     
-                    let newThursdayWorkout = WorkoutInfo(exercise: thursdayExercise, sets: thursdaySets, reps: thursdayReps, weight: unwrappedThursdayWeight)
+                    let newThursdayWorkout = WorkoutInfo(exercise: thursdayExercise, sets: thursdaySets, reps: thursdayReps, weight: unwrappedThursdayWeight, month: unwrappedThursdayMonth, day: unwrappedThursdayDay, year: unwrappedThursdayYear)
                     thursdayList.append(newThursdayWorkout)
                     
                     //                    WorkoutManager().setWorkout(workoutList: workoutList)
@@ -67,6 +89,10 @@ struct AddThursdayView: View {
                     thursdaySets = ""
                     thursdayReps = ""
                     thursdayWeight = nil
+                    thursdayMonth = nil
+                    thursdayDay = nil
+                    thursdayYear = nil
+
                     
                     if thursdayExercise != "" && thursdaySets != "" && thursdayReps != "" && thursdayWeight != nil {
                         updateArray()
