@@ -16,6 +16,7 @@ struct Sunday: View {
                 .resizable()
                 .frame(width: 200, height: 200)
             AddSundayView(sundayList: $sundayList)
+            
         }
     }
 }
