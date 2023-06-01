@@ -24,9 +24,21 @@ struct MacroView: View {
         VStack{
             HStack{
                 Text("Welcome to the Macro Tracker")
-                    .font(.largeTitle)
+                    .font(.headline)
                     .fontWeight(.bold)
                     .padding()
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: 350, height: 50)
+                    .background(LinearGradient(
+                        gradient: Gradient(
+                            colors: [Color.red, Color.orange]),
+                        startPoint: .leading,
+                        endPoint: .center))
+                    .cornerRadius(25)
+                    .shadow(radius: 10)
+                    
+                    
                
                 Spacer()
             }
@@ -40,6 +52,7 @@ struct MacroView: View {
                         .frame(width: 300, height: 20)
                         .textFieldStyle(.roundedBorder)
                         .padding()
+                    
                      
                     
                     TextField("Enter Protein", value: $protein, format: .number)
@@ -79,6 +92,18 @@ struct MacroView: View {
                         carbs = nil
                     }, label: {
                         Text("Update Macros")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 200, height: 50)
+                            .background(LinearGradient(
+                                gradient: Gradient(
+                                    colors: [Color.red, Color.orange]),
+                                startPoint: .leading,
+                                endPoint: .trailing))
+                            .cornerRadius(25)
+                            .shadow(radius: 10)
+                           
+                            
                     })
                     
                     Button(action: {
@@ -89,6 +114,17 @@ struct MacroView: View {
                         
                     }, label: {
                         Text("Reset Macros")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 200, height: 50)
+                            .background(LinearGradient(
+                                gradient: Gradient(
+                                    colors: [Color.red, Color.orange]),
+                                startPoint: .leading,
+                                endPoint: .trailing))
+                            .cornerRadius(25)
+                            .shadow(radius: 10)
+                            
                     })
 
                     
@@ -99,12 +135,53 @@ struct MacroView: View {
             }
             
             Text("Today's Calories: \(unwrappedCalories)")
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 250, height: 50)
+                .background(LinearGradient(
+                    gradient: Gradient(
+                        colors: [Color.red, Color.orange]),
+                    startPoint: .leading,
+                    endPoint: .trailing))
+                .cornerRadius(25)
+                .shadow(radius: 10)
             
               Text("Today's Protein Intake: \(unwrappedProtein)g")
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 250, height: 50)
+                .background(LinearGradient(
+                    gradient: Gradient(
+                        colors: [Color.red, Color.orange]),
+                    startPoint: .leading,
+                    endPoint: .trailing))
+                .cornerRadius(25)
+                .shadow(radius: 10)
+                
             
               Text("Today's Fats Intake: \(unwrappedFats)g")
-            
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 250, height: 50)
+                .background(LinearGradient(
+                    gradient: Gradient(
+                        colors: [Color.red, Color.orange]),
+                    startPoint: .leading,
+                    endPoint: .trailing))
+                .cornerRadius(25)
+                .shadow(radius: 10)
+                
               Text("Today's Carbs Intake: \(unwrappedCarbs)g")
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 250, height: 50)
+                .background(LinearGradient(
+                    gradient: Gradient(
+                        colors: [Color.red, Color.orange]),
+                    startPoint: .leading,
+                    endPoint: .trailing))
+                .cornerRadius(25)
+                .shadow(radius: 10)
                 
         
             
