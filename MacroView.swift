@@ -10,19 +10,20 @@ import SwiftUI
 struct MacroView: View {
     
     @State var calories: Int?
-    @State var unwrappedCalories = 0
+    @State var unwrappedCalories = UserDefaults.standard.integer(forKey: "Calories")
     @State var protein: Int?
-     @State var unwrappedProtein = 0
+    @State var unwrappedProtein = 0
     @State var fats: Int?
-     @State var unwrappedFats = 0
+    @State var unwrappedFats = 0
     @State var carbs: Int?
-     @State var unwrappedCarbs = 0
+    @State var unwrappedCarbs = 0
     
     
     var body: some View {
         
         VStack{
-            HStack{
+            
+            HStack(){
                 Text("Welcome to the Macro Tracker")
                     .font(.headline)
                     .fontWeight(.bold)
@@ -47,7 +48,9 @@ struct MacroView: View {
             
             HStack{
                 
-                VStack{
+                VStack(alignment: .leading){
+                    
+                    
                     TextField("Enter Calories", value: $calories, format: .number)
                         .frame(width: 300, height: 20)
                         .textFieldStyle(.roundedBorder)
@@ -186,5 +189,8 @@ struct MacroView: View {
         
             
         }
+        .onAppear(perform: {
+            unwrappedCalories = UserDefaults.standard.integer(forKey: "Calories")
+        })
     }
 }
